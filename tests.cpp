@@ -13,7 +13,7 @@ Coord3D vel = {1, -5, 0.2};
 TEST_CASE("Length"){
     CHECK(length(&pointP) - 37.4166 < 0.001);
     CHECK(length(&pointQ) - 36.4  < 0.01);
-    CHECK(length(&pointF) - 46.593 < 0.001);
+     CHECK(length(&pointF) - 46.593 < 0.001);
 
 
 
@@ -22,8 +22,8 @@ TEST_CASE("Length"){
 TEST_CASE ("Farther From Origin"){
 
     CHECK(fartherFromOrigin(&pointP, &pointQ) == &pointP);
-    CHECK(fartherFromOrigin(&pointQ,&pointF) == &pointF);
-    CHECK(fartherFromOrigin(&pointP,&pointF) == &pointF);
+    CHECK(fartherFromOrigin(&pointQ,&pointF) == &pointF );
+    CHECK(fartherFromOrigin(&pointP,&pointF) == &pointF );
 }
 
 TEST_CASE ("Move"){
@@ -42,6 +42,7 @@ TEST_CASE ("Move"){
 
 TEST_CASE ("Create Coord3D") {
 
- //   CHECK(createCoord3D());
+  // Coord3D ppos = createCoord3D(5,11,45); 
+  // CHECK(length(&pointF) == length(&ppos));
 
 }
