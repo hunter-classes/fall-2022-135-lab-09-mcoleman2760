@@ -13,7 +13,6 @@ return len;
 
 Coord3D * fartherFromOrigin(Coord3D *p1, Coord3D *p2){
 
- 
  if (length(p1) > length(p2)){
 
     return p1;
@@ -23,8 +22,6 @@ Coord3D * fartherFromOrigin(Coord3D *p1, Coord3D *p2){
  else {
     return p2;
  }
-
-
 
 }
 
@@ -38,29 +35,18 @@ P.x = P.x + V.x * dt;
 P.y = P.y + V.y * dt;
 P.z = P.z + V.z * dt;
 
- 
-
 }
 
 Coord3D* createCoord3D(double x, double y, double z){
 
 Coord3D* ncoord = new Coord3D;
-
-ncoord->x = x;
-
-ncoord->y = y;
-
-ncoord->z = z;
-
+*ncoord = {x, y, z};
 return ncoord;
-
 
 }
 
 void deleteCoord3D(Coord3D *p){
 
 delete p;
-
-
 
 }
