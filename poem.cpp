@@ -11,12 +11,11 @@ int main() {
     while(true) {
         string *p;
         p = createAPoemDynamically();
-
-        
-    if (!p)
-    {
-    cout << " Memory allocation failed\n";
-    }   
+        if (!p)
+        {
+            cout << " Memory allocation failed\n";
+        }   
+    
     cout<<*p<<"\n";
     
     delete p;
