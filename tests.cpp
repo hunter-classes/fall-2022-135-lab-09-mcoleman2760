@@ -42,7 +42,16 @@ TEST_CASE ("Move"){
 
 TEST_CASE ("Create Coord3D") {
 
-  // Coord3D ppos = createCoord3D(5,11,45); 
-  // CHECK(length(&pointF) == length(&ppos));
+   Coord3D *pointG = createCoord3D(5,11,45); 
+   CHECK((*pointG).x == 5);
+   CHECK((*pointG).y == 11);
+   CHECK((*pointG).z == 45);
 
+   Coord3D *pointH = createCoord3D(5243,-2311,45.32);
+   CHECK((*pointH).x == 5243);
+   CHECK((*pointH).y == -2311);
+   CHECK((*pointH).z == 45.32); 
+
+   deleteCoord3D(pointG);
+   deleteCoord3D(pointH);
 }
